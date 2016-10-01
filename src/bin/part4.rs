@@ -8,40 +8,20 @@ struct Point {
 }
 
 struct Room {
-    length: u8,
-    width: u8,
-    stars: Vec<Point>
+    // FILL THIS IN //
 }
 
 impl Room {
     fn new(length: u8, width: u8) -> Room {
-        Room {
-            length: length,
-            width: width,
-            stars: vec!()
-        }
+        // FILL THIS IN //
     }
 
     fn new_with_stars(length: u8, width: u8, stars: Vec<Point>) -> Room {
-        Room {
-            length: length,
-            width: width,
-            stars: stars
-        }
+        // FILL THIS IN //
     }
 
     fn add_star(&mut self, new_star: Point) {
-        if new_star.x == 0 || new_star.x == self.length-1 ||
-            new_star.y == 0 || new_star.y == self.width-1 {
-            return;
-        }
-        for star in &self.stars {
-            if new_star.x == star.x && new_star.y == star.y {
-                return
-            }
-        }
-
-        self.stars.push(new_star);
+        // FILL THIS IN //
     }
 
     // randomly decide where to place the star
@@ -79,7 +59,7 @@ impl Room {
             // for each character (across)
             for x in 0..self.length {
                 // if we are drawing a wall
-                let current_point = Point{x: x, y: y};
+                let current_point = // FILL THIS IN // ;
                 if self.point_is_wall(&current_point) {
                     print!("=");
                 } else if self.is_star_at_point(&current_point) {
